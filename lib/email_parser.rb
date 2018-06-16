@@ -10,7 +10,7 @@ class EmailParser
     emails_array.each {|email| @@emails << email}
   end
   
-  def parse()
+  def parse
     @@emails
   end
   
