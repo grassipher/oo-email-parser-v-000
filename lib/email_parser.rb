@@ -5,7 +5,8 @@
 class EmailParser
   
   def self.parse(csv_values)
-    csv_values.split(/[\s(\s,)]/)
+    csv_array = csv_values.split(/[\s(\s,)]/)
+    return csv_array
   end
   
 end
