@@ -11,7 +11,9 @@ class EmailParser
   end
   
   def parse
-    @@emails
+    @@emails.each do |email|
+      @@emails.delete(email) if email == "" || email == " "
+    end
   end
   
 end
