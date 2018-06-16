@@ -6,7 +6,7 @@ class EmailParser
   @@emails = []
   
   def initialize(emails)
-    emails_array = emails.split(", ")
+    emails_array = emails.split(/[,\s]/)
     emails_array.each {|email| @@emails << email}
   end
   
