@@ -3,16 +3,16 @@
 # unique email addresses. The delimiters to support are commas (',')
 # or whitespace (' ').
 class EmailParser
-  @@emails = []
   
   def initialize(emails)
+    @emails = []
     emails_array = emails.split(/[,\s]/)
-    emails_array.each {|email| @@emails << email if !@@emails.include?(email)}
+    emails_array.each {|email| @emails << email if !@emails.include?(email)}
   end
   
   def parse
-    @@emails.each do |email|
-      @@emails.delete(email) if email == "" || email == " "
+    @emails.each do |email|
+      @emails.delete(email) if email == "" || email == " "
     end
   end
   
